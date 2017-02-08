@@ -1,0 +1,94 @@
+#bb-testimonials-section {
+   @extend %bb-section-defaults;
+   color: $clr-white;
+   
+   .bb-section {
+      
+      &__wrap {
+         @extend .container-fluid;
+      }
+      
+      &__outer {
+         @extend .row;
+      }
+      
+      &__inner {
+         @extend .col-sm-12;
+      }
+      
+      &__title {
+         padding: 0 2.5rem;
+         position: absolute;
+         top: 6rem;
+         width: 100%;
+         
+         @media (min-width: $screen-sm-min) {
+         	width:calc(100% - 2.5rem);
+         }
+         
+         h1 {
+            color: $clr-white;
+            margin-bottom: 4.5rem;
+            
+            @media (min-width: $screen-sm-min) {
+            	margin-bottom: 3rem;
+            }
+         }
+      }
+   }
+
+   .bb-testimonial {
+      &__wrap {
+         @extend .row;
+         .fa-quote-left {
+            @extend .pull-left;
+         }
+      }
+
+      &__img {
+         @extend .col-sm-4; 
+         @extend .col-md-3;
+         img {
+            @extend .img-responsive;
+         }
+      }
+
+      &__copy {
+         @extend .col-sm-8;
+         @extend .col-md-9;
+      }
+
+      &__copy-no-img {
+         @extend .col-sm-12;
+      }
+
+      &__author {
+         display: inline-block;
+         font: bold 2.2rem $font-main;
+         width: 100%;
+      }
+
+      
+   }
+   
+   .bg-cont {
+		background-size: cover !important;
+		padding: 17.5rem 2.5rem 7.5rem;
+	}
+	
+	.fa {
+		display: none;
+	}
+	
+	p {
+		display: inline-block;
+		font: normal 1.8rem $font-serif;
+		max-width: 70rem;
+		
+		@media (min-width: $screen-sm-min) {
+			font-size: 2.2rem;
+		}
+	}
+	
+	
+}

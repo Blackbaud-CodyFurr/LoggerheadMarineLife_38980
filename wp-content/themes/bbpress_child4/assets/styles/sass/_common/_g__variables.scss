@@ -1,0 +1,102 @@
+//FONTS
+$icon-font-path:		"../../../bower_components/bootstrap-sass-official/assets/fonts/bootstrap";
+$fa-font-path:       "../../../bower_components/font-awesome/fonts";
+$font-main:				"proxima-nova";
+$font-serif:			"Merriweather";
+
+$font-light:			300;
+$font-normal:			400; 
+$font-bold:				700;
+$font-bolder:			900;
+
+//COLORS 
+$clr-white:				#fff;
+$clr-black:				#000;
+
+$clr-brand:				#004275; //dark blue
+$clr-brand-2: 			#57b9e1; //light blue
+$clr-brand-3:			#e79c36; //orange
+$clr-text:				#434343; //text
+$clr-text-light: 		#707070; // text light gray
+$clr-link: 				$clr-brand; //blue
+$clr-link-2:			$clr-brand-3;
+$clr-bg: 				#d8eefb;
+
+$clr-brand-dark:		#002b5a;
+$clr-brand-light:		#fff;
+$clr-brand-2-dark:		#d6d6d6; //darker gay
+$clr-brand-2-light:		#e5e5e5; //lighter gray
+
+// The following are Variables to add colors directly to elements
+
+//GENRAL BODY
+$body-bg:				$clr-white;
+$body-clr:				$clr-text;
+$body-link:				$clr-link;
+$body-link-hover:		$clr-brand-dark;
+
+//Header
+$header-border:			$clr-brand;
+$header-bg:				$clr-white;
+$hamburger-bg:			$clr-brand;
+
+$nav-bg:				$clr-bg;
+$nav-border:			$clr-brand-2;
+$navbar-bg:				$clr-bg;
+$nav-link:				$clr-brand;
+$nav-link-hover:		$clr-white;
+$nav-link-bg:			transparent;
+$nav-link-bg-hover:		$clr-brand;
+$nav-submenu-bg:		$clr-bg;
+$nav-submenu-border:	$clr-brand;
+$nav-submenu-link:		$clr-text;
+$nav-submenu-link-hover:$clr-brand;
+
+//Footer
+$footer-bg:				$clr-white;
+//$footer-clr:
+$footer-link:			$clr-brand-dark;
+//$footer-link-hover:
+
+// HEADINGS
+$h1-clr:				$clr-brand;
+$h2-clr:				$clr-text;
+$h3-clr:				$clr-text;
+$h4-clr:				$clr-text;
+$h5-clr:				$clr-text;
+$h6-clr:				$clr-text;
+
+$blockquote-clr:		$clr-text-light;
+//Links
+
+//Button
+$primary-btn-bg:		$clr-brand;
+$primary-btn-clr:		$clr-white;
+$primary-btn-bg-hover:	$clr-brand-2;
+$primary-btn-clr-hover:	$clr-white;
+
+$alt-btn-bg:			$clr-brand-2-light;
+$alt-btn-clr:			$clr-text;
+$alt-btn-bg-hover:		$clr-brand;
+$alt-btn-clr-hover:		$clr-white;
+
+$search-input-bg:		$clr-white;
+$search-input-clr:		$clr-text;
+$search-btn:			$clr-black;
+$search-btn-hover:		$clr-brand;
+$search-clr:			$clr-white;
+$search-clr-hover:		$clr-white;
+
+//Input, Select, Textarea
+$input-bg:				$clr-bg;
+$input-clr:				$clr-text;
+
+$figcaption-bg:			$clr-brand;
+$figcaption-clr:		$clr-white;
+
+$warning-bg:			$clr-bg;
+
+//Social Nav Icons
+$icon-clr:				$clr-brand;
+$icon-clr-hover:		$clr-brand-dark;
+

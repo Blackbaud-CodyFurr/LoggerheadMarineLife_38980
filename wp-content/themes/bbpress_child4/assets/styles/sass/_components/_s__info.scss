@@ -1,0 +1,40 @@
+#bb-info-section {
+   @extend %bb-section-defaults;
+   
+   .bb-section {
+      
+      &__wrap {
+         @extend .container-fluid;
+         h1 {
+	         font-family: $font-serif;
+	         text-transform: none;
+	         font-size: 36px;
+	         line-height: 1.4em !important;
+	         @media (max-width: 768px) {
+		         font-size: 28px;
+	         }
+         }
+         .alt-button {
+	         background: $clr-brand-3;
+	         i {
+		         color: $clr-white;
+		         padding-right: 10px;
+	         }
+	         a {
+		        color: $clr-white;
+		       }
+		     &:hover {
+			     background: $clr-brand-2;
+		     }
+         }
+      }
+      
+      &__outer {
+         @extend .row;
+      }
+      
+      &__inner {
+         @extend .col-xs-12;
+      }
+   }
+}

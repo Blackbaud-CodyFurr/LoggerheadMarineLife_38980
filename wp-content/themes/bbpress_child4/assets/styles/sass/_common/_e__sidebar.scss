@@ -1,0 +1,7 @@
+%bb-sidebar {
+	display:inline-block;
+	margin-top:25px;
+	padding-top:25px;
+	border-top:1px solid $clr-brand-2;
+	@extend .col-md-3;
+}

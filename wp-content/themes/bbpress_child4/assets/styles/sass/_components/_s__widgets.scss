@@ -1,0 +1,90 @@
+#bb-widgets-section {
+	padding-top:55px;
+	padding-bottom: 55px;
+	margin-top: 55px;
+	background-size: cover !important;
+	.bb-section {
+   	
+	   	&__wrap {
+	      	@extend .container;
+	   	}
+	   	
+	   	&__outer {
+	      	@extend .row;
+	   	}
+	}
+	
+	#widget-blog-feed {
+		margin-bottom: 15px;
+	}
+
+	.home-widget {
+		@extend .col-sm-4; 
+		@media (max-width: 768px) {
+			margin-bottom: 50px;
+		}
+		p {
+			color: $clr-white;
+			display: none;
+		}
+		
+	}
+
+	h2 {
+		margin-bottom:35px;
+		color: $clr-white;
+		font-size: 24px;
+		font-weight: 600;
+	}
+	
+	h3 {
+		font: 300 36px $font-serif;
+		text-align: center;
+		color: $clr-white;
+		margin-bottom: 45px;
+	}
+	
+	p {
+		color: $clr-white;
+	}
+
+	.bb-widget-callout {
+		@extend .btn-primary;
+		@extend .btn;
+		margin-top:25px;
+		color: $clr-brand;
+		background: $clr-white;
+	}
+
+	.page-item {
+		margin-bottom:25px;
+		display:inline-block;
+		width:100%;
+
+		&:hover {
+			h3 {
+				color:$clr-brand;
+			}
+		}
+
+		img {
+			margin-bottom:15px;
+			@extend .img-responsive;
+		}
+
+		.event-info {
+			.title {
+				//@include home-widget-title;
+				margin-right:10px;
+				@extend h3;
+			}
+			.date {
+				font-size:15px;
+				color:$clr-text;
+				@include responsive(sm) {
+					font-size:14px;
+				}
+			}
+		}
+	}
+}

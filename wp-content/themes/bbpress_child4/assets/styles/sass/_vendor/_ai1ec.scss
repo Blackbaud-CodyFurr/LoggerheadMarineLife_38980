@@ -1,0 +1,123 @@
+//
+// All In One Event Calendar Formatting 
+// --------------------------------------------------
+
+// for Side Bar
+
+// Calendar Formatting for Side Bar
+[class*=ai1ec_agenda_widget]{
+	[class*=ai1ec-agenda-widget]{
+		font-family: $font-main;
+		font-size: 13px;
+		line-height: 1.428571429;
+		color: $text-color;
+		word-wrap: break-word;
+		max-width: 100%;
+		&:hover,
+		&:focus {
+			color:$clr-brand; 
+		}
+		.ai1ec-date{
+			background: transparent;
+			border-top: 1px solid $gray-lighter;
+			&.ai1ec-today{
+				background: transparent;
+				border-top: 1px solid $gray-lighter;
+			}
+			.ai1ec-month {
+				background: $clr-brand;
+				color: $clr-white;
+				text-shadow: $carousel-text-shadow;
+			}
+			.ai1ec-date-events {
+				.ai1ec-event{
+					>a{
+						background: $clr-white;
+						color: $clr-brand;
+					}
+				}
+			}
+		}
+	}
+}
+// Calendar Formatting for pop-u2p
+.ai1ec-popover.ai1ec-popup {
+	border-color:$gray-lighter;
+	a{
+		color:$clr-brand; 
+		&:hover,
+		&:focus {
+			color:$clr-white; 
+		}
+	}
+	.ai1ec-popover-content {
+		background:$clr-white;
+		color:$text-color;
+	}
+	.ai1ec-event-time {
+		background:$gray-lighter;
+	}
+}
+// Caleander for full screen
+#ai1ec-container{
+	.ai1ec-event-title{
+		color: $clr-brand;
+	}
+	.ai1ec-dropdown-menu {
+		.ai1ec-active{
+			a {
+				color: $clr-white;
+			}
+		}
+	}
+	.ai1ec-month-view .ai1ec-today, 
+	.ai1ec-week-view .ai1ec-today {
+		background-color: rgba($clr-brand,0.30) !important;
+		.ai1ec-date {
+			background-color: rgba($clr-brand,1);
+			a {
+				color: $clr-white;
+				text-shadow: $carousel-text-shadow;					
+				}
+			}
+		}
+	.ai1ec-date{
+		background: transparent;
+		border-top: 1px solid $gray-lighter;
+		&.ai1ec-today{
+			background: transparent;
+			border-top: 1px solid $gray-lighter;
+		}
+		.ai1ec-month {
+			background: $clr-brand;
+			color: $clr-white;
+			text-shadow: $carousel-text-shadow;
+		}
+		.ai1ec-date-events {
+			.ai1ec-event{
+				>a{
+					background: $clr-white;
+					color: $clr-brand;
+				}
+			}
+		}
+	}
+}
+
+.ai1ec-categories, .ai1ec-recurrence {
+	display:none;
+}
+
+.ai1ec-event-details, .ai1ec-single-event .ai1ec-time .ai1ec-field-value, .ai1ec-multi-event .ai1ec-time .ai1ec-field-value {
+	font:normal 14px $font-main;
+	color:$clr-text;
+}
+
+.ai1ec-field-label {
+	color:$clr-brand-2;
+	width:auto;
+}
+
+.ai1ec-event-avatar img {
+	min-height:0;
+}

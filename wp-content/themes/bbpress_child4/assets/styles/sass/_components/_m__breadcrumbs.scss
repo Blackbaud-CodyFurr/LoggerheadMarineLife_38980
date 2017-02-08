@@ -1,0 +1,29 @@
+#page-breadcrumbs {
+	@extend .col-sm-5;
+	.breadcrumbs {
+		padding:15px 0 18px;
+		float:left;
+		font-size:16px;
+		color:$clr-text;
+		width:100%;
+		display: none;
+		@include responsive(sm) {
+			width:auto;
+		}
+		.delimiter {
+			&:after {
+				content:">";
+				padding:0 10px;
+			}
+		}
+		a {
+			color:$clr-text;
+			&:hover {
+				color:$clr-brand-dark;
+			}
+		}
+		.current {
+			color:$clr-brand;
+		}
+	}	
+}

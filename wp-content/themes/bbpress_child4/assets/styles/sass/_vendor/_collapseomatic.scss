@@ -1,0 +1,14 @@
+//
+// Collapse-O-Matic adds an [expand] shortcode that wraps content into a, jQuery collapsible div.
+// --------------------------------------------------
+
+.collapseomatic {
+	display: block;
+	&:focus {
+		outline: none;
+	}
+	+ .collapseomatic_content{
+		padding: 0 0 20px;
+		
+	}
+}

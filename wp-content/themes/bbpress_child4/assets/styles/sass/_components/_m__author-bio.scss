@@ -1,0 +1,11 @@
+.bb-author {
+	&__img-wrap {
+		@extend .col-sm-3; 
+		@extend .col-md-2;
+	}
+
+	&__info {
+		@extend .col-sm-9; 
+		@extend .col-md-10;
+	}
+}

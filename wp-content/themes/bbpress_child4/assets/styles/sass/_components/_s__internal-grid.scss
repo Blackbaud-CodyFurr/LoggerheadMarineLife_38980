@@ -1,0 +1,65 @@
+.internal-grid {
+	margin-top:40px;
+	position:relative;
+	float:left;
+	width:100%;
+	.grid-row {
+		@extend .row;
+	}
+	.grid-section-title {
+		@extend %blockquote;
+		margin-bottom:25px;
+	}
+	.grid-block {
+		margin-bottom:30px;
+		@extend .col-sm-6;
+		@include responsive(xs) {
+			height:auto !important;
+		}
+
+		&.block-three {
+			@extend .col-md-4;
+		}
+		&.block-four {
+			@extend .col-md-3;
+		}
+		&.block-five {
+			@extend .col-md-20;
+		}
+
+		.inner-cont {
+			border:1px solid $clr-brand-2;
+			padding:25px;
+			height:100%;
+			.bb-callout {
+				@extend .btn;
+				width:100%;
+				margin-top:15px;
+			}
+			strong {
+				margin-top:10px;
+				display:inline-block;
+				font-size:15px;
+			}
+			.box-info {
+				font-size:15px;
+				@include responsive(xs) {
+					height:auto !important;
+				}
+			}
+			.img-cont {
+				width:100%;
+				display:table-cell;
+				vertical-align:middle;
+				@include responsive(xs) {
+					display:inline-block;
+					height:auto !important;
+				}
+				img {
+					@extend .img-responsive;
+				}
+			}
+		}
+	}
+	
+}

@@ -1,0 +1,103 @@
+.bb-widget-logo-slider {
+	.slider-controls {
+		position:absolute;
+		right:0;
+		margin-top:-42px;
+		.carousel-control {
+			@extend %mini-arrows;
+		}
+	}	
+
+	.carousel-inner {
+		height:60px;
+		@include responsive(md) {
+			height:60px;
+		}
+		@include responsive(lg) {
+			height:100px;
+		}
+	}
+
+	.bb-logo-slider {
+		&__wrap {
+			@extend .row;
+			margin-left:-10px;
+		}
+
+		&__inner {
+			@extend .col-sm-20;
+			width:50% !important;
+			float:left;
+			padding-left:10px;
+			display:table;
+			height:100%;
+			@include responsive(sm) {
+				width:25% !important;
+			}
+			@include responsive(md) {
+				width:20% !important;
+			}
+			
+		}
+
+		&__logo-wrap {
+			display:table-cell;
+			vertical-align:middle;
+			height:100%;
+			img {
+				@extend .img-responsive;
+			}
+		}
+	}
+	
+	
+	
+}
+
+.logo-item {
+	height:100%;
+	&.active.left { 
+		left: -50%; 
+	}
+	&.next {
+		left: 50%;
+	}
+	&.prev {
+		left: -50%; 
+	}
+	@include responsive(sm) {
+		&.active.left { 
+			left: -25%; 
+		}
+		&.next {
+			left: 25%;
+		}
+		&.prev {
+			left: -25%; 
+		}
+	}
+	@include responsive(md) {
+		&.active.left { 
+			left: -20%; 
+		}
+		&.next {
+			left: 20%;
+		}
+		&.prev {
+			left: -20%; 
+		}
+	}
+	&:not(.prev) {
+		visibility: visible;
+	}
+	&.right:not(.prev) {
+		visibility: hidden;
+	}
+	.rightest{ 
+		visibility: visible;
+	}
+}
+
+
+
+	

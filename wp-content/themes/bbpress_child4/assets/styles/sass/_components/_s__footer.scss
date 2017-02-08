@@ -1,0 +1,143 @@
+#bb-footer {
+	background:$footer-bg;
+	padding:0 0 30px;
+	.bb-footer__social {
+		background: $clr-brand;
+	}
+	.bb-footer__wrap {
+		@extend .container-fluid;
+		.bb-footer__inner {
+			@extend .row;
+			padding-top: 40px;
+			&.connect {
+				padding: 25px 0;
+				h4 {
+					color: $clr-white;
+					margin-bottom: 0;
+					text-transform: none;
+					font-size: 20px;
+					line-height: 1.4em !important;
+				}
+				.footer-bucket-2 {
+					a {
+						color: $clr-white;
+						background: $clr-brand-3;
+						text-transform: uppercase;
+						font-size: 24px;
+						font-weight: bold;
+						padding: 15px;
+						&:hover {
+							background-color: $clr-brand-2;
+						}
+						i {
+							padding-left: 10px;
+						}
+						@include responsive(sm) {
+							padding: 10px;
+							font-size: 20px;
+						}
+						@media (max-width: 768px) {
+							font-size: 18px;
+						}
+					}
+				}
+				.footer-bucket-3 {
+					h4 {
+						@include responsive(sm)  {
+							margin-top: 0;
+						}
+						@include responsive(lg) {
+							float: left;
+							margin-bottom: 0;
+						}
+						margin: 25px 0 15px;
+						text-transform: uppercase;
+						padding-right: 15px;
+						line-height: 1.6em !important;
+					}
+					ul {
+						li {
+							margin-top: -5px;
+						}
+					}
+				}
+			}
+		}
+		.bb-footer__bucket {
+			h4 {
+				color: $clr-brand;
+			}
+			&.footer-bucket-1 {
+				@extend .col-sm-4;
+				font-size:15px;
+				margin-bottom:30px;
+				span {
+					display:inline-block;
+					width:100%;
+				}
+				a {
+					@include link-hover;
+				}
+				.copyright {
+					margin-top:30px;
+				}
+				.site-credit {
+					a {
+						font-weight:normal;
+						color:$clr-text;
+					}
+				}
+				@include responsive(sm) {
+					margin-bottom:0;
+				}
+			}
+			&.footer-bucket-2 {
+				@extend .col-sm-3;
+			}
+			&.footer-bucket-3 {
+				@extend .col-sm-5;
+				.BBFormContainer {
+					padding: 0;
+					.BBFormSection {
+						margin: 0;
+					}
+				}
+				.BBFormFieldContainer {
+					margin-top: 0;
+				}
+				.BBFormFieldContainerRequired {
+					margin-bottom: 20px;
+				}
+				.BBFormSectionHeading,
+				.BBFormSubSectionHeading  {
+					display: none;
+				}
+				.BBFormSubmitbutton {
+					border: none;
+				}
+			}
+			.bb-nav__footer-admin-wrap {
+				ul {
+					list-style:none;
+					padding:0;
+					li {
+						margin-bottom:20px;
+						a {
+							@extend h4;
+							&:hover {
+								color:$footer-link;
+							}
+						}
+						&.small {
+							a {
+								text-transform:none;
+								font-size:16px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

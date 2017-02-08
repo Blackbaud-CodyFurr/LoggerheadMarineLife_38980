@@ -1,0 +1,44 @@
+//
+// WP-Polls Widget formatting
+// --------------------------------------------------
+.widget_polls-widget{
+	wp-polls-ul {
+		display: block;
+		label{
+			font-weight: 400;			
+		}
+	}
+	.wp-polls {			
+		p {
+			text-align: left !important;
+		}
+		.pollbar {
+			@include linear-gradient($clr-brand-2-light, $clr-brand-2-dark);
+			border: 1px solid $clr-brand-2;			
+		}
+		.Buttons {
+			background-color: $clr-brand-2;
+			border-color: $clr-brand-2;
+			color: $clr-white;
+			text-shadow: $carousel-text-shadow;
+			display: block;
+			padding: 4px 12px 2px 12px;
+			margin-bottom: 10px;
+			text-align: center;
+			font-weight: bold;
+			text-decoration: none;
+			border-radius: $border-radius-base;
+			text-transform: uppercase;
+			font-weight: 900;
+		}
+		.wp-polls-ans p {
+			text-align: right !important;
+			a {
+				display: none;
+			}
+		}
+	}
+	> ul {
+		display: none;
+	}
+}

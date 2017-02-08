@@ -1,0 +1,34 @@
+<div class="wrap wrap-blackbaud">
+    <div class="page-header">
+        <div class="thumbnail">
+            <img src="../wp-content/plugins/blackbaud-luminate-forms/assets/img/dashicon-2.png">
+        </div>
+        <h2 class="page-title">About &amp; Help <small>Blackbaud: Luminate Forms</small></h2>
+    </div>
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">What does the Blackbaud Luminate Forms plugin do?</h3>
+        </div>
+        <div class="panel-body">
+            ...
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">How do I add a new Blackbaud Flyer to my WordPress site?</h3>
+        </div>
+        <div class="panel-body">
+            ...
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-heading">
+            <h3 class="panel-title">Where do I go for additional assistance?</h3>
+        </div>
+        <div class="panel-body">
+            <ul>
+                <li><a href="https://www.blackbaud.com/support/casecentral/casecentral.aspx" target="_blank">Submit a Support Ticket&nbsp;&rarr;</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

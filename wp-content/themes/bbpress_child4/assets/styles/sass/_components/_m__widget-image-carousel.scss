@@ -1,0 +1,34 @@
+.bb-widget-img-carousel {
+	&__wrap {
+		@extend .row;
+	}
+
+	&__img-wrap {
+		@extend .col-md-4;
+		img {
+			@extend .img-responsive;
+		}
+	}
+
+	.slider-controls {
+		position:absolute;
+		right:0;
+		margin-top:-60px;
+		.carousel-control {
+			@extend %nav-mini-arrows;
+		}
+	}	
+}
+
+.img-item {
+	&.active.left { 
+		left: -33%; 
+	}
+	&.next {
+		left:  33%;
+	}
+	&.prev {
+		left: -33%; 
+	}
+}
+	

@@ -1,0 +1,54 @@
+.bb-search-wrap {;
+	@extend .pull-right;
+	width:160px;
+	padding-left: 50px;
+	//width:100%;
+	@include responsive(sm) {
+		position: absolute;
+		right: 35px;
+	}
+	@include responsive(md) {
+		width:auto;
+	}
+	@media (max-width: 767px) {
+		width: 100%;
+		padding-left: 0;
+	}
+	.search-form {
+		margin:10px 0 20px;
+		float:right;
+		max-width:240px;
+		// @include responsive(xs) {
+		// 	max-width:90px;
+		// }
+		.search-field {
+			height:38px;
+			border: none;
+			background:$search-input-bg !important;
+			color:$search-input-clr;
+			width: 0;
+			transition: width 0.5s ease;
+			padding: 0;
+			&.is_open {
+				width: 100% !important;
+				padding:0 0 0 8px;
+			}
+			@media (max-width: 767px) {
+				width: 100% !important;
+			}
+		}
+		button {
+			background:transparent;
+			color:$clr-brand;
+			padding:6px 12px !important;
+			height:38px;
+			.fa {
+				font-size:18px;
+			}
+			&:hover {
+				background:$search-btn-hover;
+				color:$search-clr;
+			}
+		}
+	}
+}

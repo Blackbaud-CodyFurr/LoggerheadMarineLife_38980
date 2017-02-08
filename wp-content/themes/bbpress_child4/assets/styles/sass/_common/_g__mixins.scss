@@ -1,0 +1,208 @@
+@mixin font-main() {
+	font-weight:400;
+	font-size:16px;
+	font-family:$font-main;
+	letter-spacing:0.5px;
+}
+
+@mixin font-bold() {
+	font-weight:700;
+	text-transform:uppercase;
+	font-family:$font-main;
+}
+
+
+
+
+@mixin link-hover {
+	font-weight:bold;
+	&:hover {
+		color:$body-link-hover;
+		text-decoration:underline;
+	}
+}
+
+
+// Retina
+$is-hidpi: "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5),(min-resolution: 1.5dppx)";
+
+@mixin retinize($file, $type, $width, $height) {
+    background-image: url('../../images/' + $file + '.' + $type);
+    background-repeat:no-repeat;
+    background-position:center;
+    width:$width;
+    height:$height;
+    @media #{$is-hidpi} {
+      &{
+      background-image: url('../../images/' + $file + '@2x.' + $type);
+      @include background-size($width);
+    } 
+  }
+}
+
+//Responsive Media Queries
+@mixin responsive($width) {
+
+  @if $width == xxs {
+    @media only screen and (min-width: 320px) { 
+      @content; 
+    } 
+  }
+
+  @else if $width == xs {
+    @media only screen and (min-width: $screen-xs) { 
+      @content; 
+    } 
+  }
+
+  @else if $width == sm {
+    @media only screen and (min-width: $screen-sm) { 
+      @content; 
+    }
+  }
+
+  @else if $width == md {
+    @media only screen and (min-width: $screen-md) { 
+      @content; 
+    }
+  }
+
+  @else if $width == lg {
+    @media only screen and (min-width: $screen-lg) { 
+      @content; 
+    }
+  }
+
+  @else if $width == xl {
+    @media only screen and (min-width: $screen-xl) { 
+      @content; 
+    }
+  }  
+  
+}
+
+
+
+
+//target webkit browsers
+@mixin webkit() {
+  @media(-webkit-min-device-pixel-ratio:0) {
+    @content; 
+  }
+}
+
+
+//Border Radius
+@mixin rounded($radius) {
+    -webkit-border-radius: $radius !important;
+    -moz-border-radius: $radius !important;
+    border-radius: $radius !important;
+}
+
+//Background-size
+@mixin background-size($width) {
+   -webkit-background-size: $width;
+      -moz-background-size: $width;
+           background-size: $width;
+}
+
+//CSS transform
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+//Box Shadow 
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $size $color !important;
+        -moz-box-shadow:inset $top $left $blur $size $color !important;
+        box-shadow:inset $top $left $blur $size $color !important;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $size $color !important;
+        -moz-box-shadow: $top $left $blur $size $color !important;
+        box-shadow: $top $left $blur $size $color !important;
+    }
+}
+
+//Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+@mixin last {
+  &:last-child {
+    margin-right:0;
+  }
+}
+
+@mixin fluid-img {
+  max-width:100%;
+  height:auto;
+  width:100%;
+  @include responsive(md) {
+    width:auto;
+  }
+}
+
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
+
+@mixin border {
+	border-top:4px solid $clr-brand-2;
+}
+
+@mixin blockquote {
+	font-size:20px;
+	font-style:italic;
+	color:$blockquote-clr;
+	padding:25px 25px 0 0;
+	border-top:4px;
+	border-left:none;
+	text-align:left;
+	@include border;
+
+	
+}
+
+@mixin sub-menu {
+	display:none;
+  border-width:6px 0 0 0;
+  border-color:$nav-submenu-border;
+  border-style:solid;
+	background:$nav-submenu-bg;
+	position:absolute;
+	right:0;
+	list-style:none;
+	padding:25px 30px 5px;
+	width:280px;
+	z-index:100;
+	> li {
+		a {
+			text-transform:uppercase;
+			color:$nav-submenu-link;
+			float:right;
+			width:100%;
+			text-align:right;
+			margin-bottom:25px;
+			&:hover {
+				color:$nav-submenu-link-hover;
+			}
+		}
+	}
+}

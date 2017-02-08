@@ -1,0 +1,1 @@
+<?php the_field('newsletter_code', $widget->ID); ?>

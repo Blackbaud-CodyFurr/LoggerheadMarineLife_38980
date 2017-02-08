@@ -1,0 +1,42 @@
+section#comments {
+	#respond {
+		margin-top:25px;
+		padding-top:25px;
+		border-top:1px solid $clr-brand-2;
+		#form-allowed-tags {
+			display:none;
+		}
+		label {
+			width:100%;
+		}
+		input, textarea {
+			width:100%;
+			&[type='submit'] {
+				width:auto;
+			}
+			@include responsive(sm) {
+				max-width:500px;
+			}
+		}
+	}
+}
+
+// .comment-list {
+//   @include list-unstyled;
+// }
+// .comment-list ol {
+//   list-style: none;
+// }
+// .comment-form p {
+//   @extend .form-group;
+// }
+// .comment-form input[type="text"],
+// .comment-form input[type="email"],
+// .comment-form input[type="url"],
+// .comment-form textarea {
+//   @extend .form-control;
+// }
+// .comment-form input[type="submit"] {
+//   @extend .btn;
+//   @extend .btn-primary;
+// }

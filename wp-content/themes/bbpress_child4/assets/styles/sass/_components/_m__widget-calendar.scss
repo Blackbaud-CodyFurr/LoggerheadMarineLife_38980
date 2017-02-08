@@ -1,0 +1,86 @@
+.home-widget {
+	#ai1ec-container {
+		.ai1ec-calendar-toolbar, .ai1ec-subscribe-container, .ai1ec-clearfix, .ai1ec-pull-left, .ai1ec-event-toggle, .post-edit-link, .ai1ec-event-time, .ai1ec-event-location {
+			display:none;
+		}
+		.ai1ec-date {
+			border:none !important;
+		}
+		.ai1ec-agenda-view {
+			.ai1ec-date-events {
+				margin:0;
+			}
+			.ai1ec-event {
+				border:none;
+				padding:0 0 0 15px;
+				text-align:left;
+				margin:0;
+				background: transparent;
+				.ai1ec-event-title {
+					text-align:left;
+					font-size:14px;
+					margin-bottom:10px;
+					float:left;
+					font-weight:bold;
+					color:$clr-white;
+					&:hover {
+						color:$clr-brand-2-light !important;
+					}
+					@include responsive(sm) {
+						font-size:18px;
+					}
+				}
+			}
+		}
+		.ai1ec-date-title {
+			float:left;
+			width:auto;
+			border:none;
+			box-shadow:none;
+			background:$clr-brand-3;
+			@include rounded(0);
+			margin:0 0 10px;
+			color:$clr-white;
+			padding: 10px;
+			border-right:1px solid $clr-text;
+			.ai1ec-month {
+				background:none;
+				@extend h5;
+				margin:0;
+				width:70px;
+				color: $clr-white;
+				font-style: normal;
+				font-size: 20px;
+			}
+			.ai1ec-day {
+				@include font-main;
+				font-size:30px;
+				font-weight: bold;
+			}
+			.ai1ec-weekday {
+				@include font-main;
+				font-size:14px;
+				text-transform:uppercase;
+				padding-bottom:8px;
+				display: none;
+			}
+		}
+		.ai1ec-read-more {
+			background:none;
+			border:0;
+			color:$clr-brand;
+			font-weight:bold;
+			&:hover {
+				text-decoration:underline !important;
+			}
+			@include rounded(0);
+			i {
+				display:none;
+			}
+		}
+		.ai1ec-event-summary {
+			float:left;
+		}
+	}
+
+}

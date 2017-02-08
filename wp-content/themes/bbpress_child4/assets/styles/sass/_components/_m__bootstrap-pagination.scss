@@ -1,0 +1,9 @@
+.bb-pagination {
+	&__wrap {
+		@extend .row;
+	}
+
+	&__outer {
+		@extend .col-sm-12;
+	}
+}

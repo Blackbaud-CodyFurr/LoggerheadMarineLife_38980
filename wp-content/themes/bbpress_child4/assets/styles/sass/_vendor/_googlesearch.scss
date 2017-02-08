@@ -1,0 +1,41 @@
+//
+// Google Search
+// --------------------------------------------------
+
+.gsc-control-cse {
+	font-family: $font-main !important;
+	border-color: transparent !important;
+	background-color: transparent !important;
+	padding: 0 !important;
+	text-transform: none;
+	form.gsc-search-box {
+		table.gsc-search-box {
+			.gsc-search-button {
+				input.gsc-search-button, 
+				input.gsc-search-button:hover, 
+				input.gsc-search-button:focus {
+					background-color: $clr-brand-2 !important;
+					border-color: $clr-brand-2 !important;
+					width: auto;
+					height: auto;
+					border-radius:  $border-radius-base !important;
+					&:hover, 
+					&:focus {
+						background-color: $clr-brand-2-dark !important;
+						border-color: $clr-brand-2-dark !important;
+					}				
+				}
+			}
+		}
+	}
+	.gs-webResult.gs-result {
+		.gs-title,
+		a.gs-title:link {
+			color: $clr-brand !important;
+			text-align: left !important;
+		}
+	}
+	.gsc-selected-option-container {
+		width: auto !important;
+	}
+}

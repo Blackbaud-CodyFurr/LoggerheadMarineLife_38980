@@ -1,0 +1,227 @@
+#bb-home-slider-section {
+	.bb-section {
+   	
+	   	&__wrap {
+	      	@extend .container-fluid;
+	      	width:100%;
+			padding:0;
+			max-width:1600px;
+	   	}
+	   	
+	   	&__outer {
+	      	@extend .row;
+	   	}
+	   	&__inner {
+	   		@extend .col-sm-12;
+	   		.item {
+		
+	   		}
+	   	}
+	}
+
+	img {
+		@extend .img-responsive;
+	}
+
+	.carousel-indicators {
+		@extend .hidden-sm;
+		@extend .hidden-xs;
+		position:absolute;
+		left:10%;
+		bottom:135px;
+		padding-left:5px;
+		li {
+			width:55px;
+			height:7px;
+			background:$clr-brand-2;
+			margin:0;
+			color:transparent;
+			@include rounded(0px);
+			border:none;
+			&.active, &.active:hover {
+				background:$clr-white;
+			}
+			&:hover {
+				background:$clr-brand-dark;
+			}
+		}
+	}
+		
+	
+	.carousel-caption {
+		position:relative;
+		width:100%;
+		background:$clr-bg;
+		bottom:0;
+		max-width:100%;
+		font-size:18px;
+		text-shadow:none;
+		color:$clr-brand-dark;
+		background:none;
+		left:0;
+		right:0;
+		@include responsive(sm) {
+			position:absolute;
+			text-shadow:none;
+			font:normal 20px $font-serif;
+			color:$clr-text;	
+			bottom:100px;
+			text-align:center;
+			&.caption-left {					
+				text-align:left;
+				left:5%;	
+			}
+			&.caption-right {	
+				right:5%;
+				left:auto;
+				text-align:right;	
+				.bb-caption-callout {
+					left: auto !important;
+					right: 0;
+				}
+			}
+		}
+		@include responsive(md) {
+			bottom:215px;
+		}
+		.caption-wrap {
+			display:inline-block;
+			max-width:100%;
+			padding:16px;
+			width:100%;
+			text-shadow: 0 0 10px transparentize($clr-black, .5);
+			@include responsive(sm) {
+				max-width:450px;
+				background: transparentize($clr-brand, .1);
+				padding:16px 20px;
+			}
+			@media (max-width: 768px) {
+				text-align: left;
+			}
+			span {
+				display:inline-block;
+				width:100%;
+				// @include responsive(xs) {
+				// 	display:inline;
+				// }
+			}
+			.bb-caption-callout {
+				@extend .btn;
+				@include responsive(sm) {
+					position:absolute;
+				}
+				bottom:0;
+				left:0;
+				margin-top:15px;
+				background: $clr-brand-2;
+				font-size: 16px;
+				@include responsive(sm) {
+					bottom:-28px;
+					
+				}
+				&:hover {
+					background: $clr-text;
+				}
+				&:after {
+					content: "";
+					font-family: 'FontAwesome';
+				}
+			}		
+			h1 {
+				color:$clr-link-2;
+				text-transform: none;
+				font:normal 30px $font-serif;
+				font-style: italic;
+				@media (max-width: 768px) {
+					font-size: 20px;
+				}
+			}
+			span {
+				font:300 40px $font-main;
+				margin:0 0 15px;
+				line-height:30px;
+				color: $clr-white;
+				text-transform: uppercase;
+				@include responsive(md) {
+					font-size:60px;
+					line-height:42px;
+				}
+				@include responsive(lg) {
+					font-size:80px;
+					line-height:45px;
+				}
+				@media (max-width: 767px) {
+					color: $clr-brand;
+					font-size: 50px;
+				}
+			}
+
+		}
+	}
+	//if it is a bg image
+	.bg-img {
+		img {
+			@extend .img-responsive;
+		}
+	}
+}
+
+
+
+
+// If the home slider is set to fade
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
+.carousel {
+	&:hover {
+		.carousel-control {
+			display:block;
+		}
+	}
+	.carousel-control {
+		display:none;
+		@extend .hidden-xs;
+		.fa {
+			font-size:40px;
+			position:absolute;
+			top:48%;
+		}
+		&.left {
+			.fa {
+				left:25px;
+			}
+		}
+		&.right {
+			.fa {
+				right:25px;
+			}
+		}
+	}
+}

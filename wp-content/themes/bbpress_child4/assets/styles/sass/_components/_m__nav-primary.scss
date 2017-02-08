@@ -1,0 +1,117 @@
+
+.bb-nav__primary {
+	
+	@extend .navbar-collapse; 
+	@extend .collapse; 
+		
+	.item-wrap {
+		position: absolute;
+		right: 0;
+	}
+	> ul {
+		width:100%;
+		border:none;
+		display:inline-block;
+		background:$navbar-bg;
+		position: relative;
+		@include responsive(lg) {
+			padding-left: 280px;
+			&#menu-action-nav {
+				position: absolute;
+				right: 0;
+			}
+		}
+		> li {
+			width:100%;
+			.sub-menu {
+				position:relative;
+				background:$nav-submenu-bg;
+				border:none;
+				width:100%;
+				display:none;
+				li {
+					a {
+						color:$nav-submenu-link;
+						text-align:center;
+						text-transform:none;
+						margin-bottom:5px;
+						&:hover {
+							color:$nav-submenu-link-hover;
+						}
+					}
+					&:last-child {
+						a {
+							margin-bottom:35px;
+						}
+					}
+				}
+			}
+			&.active-current-item {
+				> a {
+					background:$nav-link-bg-hover;
+					color:$nav-link-hover;
+					font-weight:bold;
+				}
+			}
+			> a {
+				color:$nav-link;
+				background:$nav-link-bg;
+				font-size:20px;
+				font-weight: 600;
+				padding-top: 20px;
+				padding-bottom: 20px;
+				@include responsive(md) {
+					padding-left: 15px;
+					padding-right: 15px;
+				}
+				@include responsive(lg) {
+					padding-left: 25px;
+					padding-right: 25px;
+				}
+				@media (max-width: 850px) {
+					font-size: 17px;
+				}
+			}
+			&:hover {
+				> a {
+					background:$nav-link-bg-hover;
+					color:$nav-link-hover;
+				}
+				.sub-menu {
+					display:block;
+					@media (max-width: 768px) {
+						display: none;
+					}
+				}
+			}
+			
+			@include responsive(sm) {
+				width:auto;
+				.sub-menu {
+					@include sub-menu;
+					left:0;
+					li {
+						a {
+							text-align:left;
+						}
+					}
+				}
+				&:last-child {
+					.sub-menu {
+						@include responsive(sm) {
+							right:0;
+							left:auto;
+							a {
+								text-align:right;
+							}
+						}
+						@include responsive(md) {
+						}							
+					}
+				}
+			}					
+		}
+
+	}			
+
+}

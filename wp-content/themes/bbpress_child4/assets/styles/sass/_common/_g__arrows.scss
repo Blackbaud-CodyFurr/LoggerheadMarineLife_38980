@@ -1,0 +1,27 @@
+%mini-arrows {
+	float:left;
+	text-align:left;
+	position:relative;
+	margin-right:4px;
+	display:block;
+	background:none;
+	width:auto;
+	@include opacity(100);
+	.fa {
+		color:$clr-white;
+		font-size:32px;
+		padding:2px 10px 4px;
+		background:$clr-brand;
+		position:relative;
+		float:left;
+		left:auto !important;
+		right:auto !important;
+
+	}
+	&:hover {
+		.fa {
+			background-color:$clr-brand-dark;
+		}
+		text-decoration:none;				
+	}
+}

@@ -1,0 +1,35 @@
+//This is the search result page => search.php
+
+.bb-search__result {
+	@extend .col-sm-12;
+
+	.bb-search-post {
+
+		&__wrap {
+			@extend .row;
+		}
+
+		&__outer {
+			@extend .col-sm-12;
+			@extend .col-lg-10;
+		}
+
+		&__with-img {
+			@extend .row;
+
+			.bb-search-post-img-wrap {
+				@extend .col-sm-12;
+				@extend .col-md-4;
+				img {
+					@extend .img-responsive;
+				}
+			}
+
+			.bb-search-post-excerpt {
+				@extend .col-sm-12;
+				@extend .col-md-8;
+			}
+			
+		}
+	}
+}

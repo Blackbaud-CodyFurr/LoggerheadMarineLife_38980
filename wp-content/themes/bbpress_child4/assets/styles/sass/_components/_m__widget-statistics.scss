@@ -1,0 +1,40 @@
+.bb-widget-statistics {
+	margin-bottom:10px;
+	color:$clr-brand-2;
+	text-transform: uppercase;
+	font-size:12px;
+	font-weight:bold;
+	@include responsive(md) {
+		font-size:14px;
+	}
+	&__wrap {
+
+	}
+
+	&__inner {
+		.bb-statistic-value {
+			@extend .col-xs-3;
+			@extend .col-sm-5;
+		}
+		.bb-statistic-content {
+			@extend .col-xs-9;
+			@extend .col-sm-7;
+			padding-left:10px;
+			line-height:18px;
+			h1 {
+				text-align:right;
+				font-weight:$font-bolder;
+				text-transform: lowercase;
+				@include responsive(sm) {
+					font-size:36px;
+				}
+				@include responsive(md) {
+					font-size:60px;
+					line-height:50px !important;
+				}
+			}
+		}
+	}
+	
+	
+}

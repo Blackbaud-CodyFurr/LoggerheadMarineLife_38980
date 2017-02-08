@@ -1,0 +1,20 @@
+.widget-gallery {
+	@extend %nav-ul;
+	margin:-10px 0 0;
+	li {
+		padding:0;
+		margin-top:10px;
+		@extend .col-xs-6;
+		@extend .col-md-4;
+		.gallery-caption {
+			display:none;
+		}
+		img {
+			@include fluid-img;
+			padding-right:5px;
+			@include responsive(sm) {
+				padding-right:10px;
+			}
+		}
+	}
+}

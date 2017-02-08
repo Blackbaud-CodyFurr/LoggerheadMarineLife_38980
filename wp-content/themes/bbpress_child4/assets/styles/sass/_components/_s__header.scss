@@ -1,0 +1,82 @@
+#bb-header {
+	
+	.bb-header__top, .bb-header__bottom {
+		.bb-header__top-wrap, .bb-header__bottom-wrap {
+			@extend .container-fluid;
+			.bb-header__top-inner, .bb-header__bottom-inner {
+				@extend .row;
+			}
+			.bb-header__top-inner {
+				position: relative;
+			}
+		}
+		.bb-header__bottom-wrap {
+			@include responsive(lg) {
+				margin-top: 20px;
+			}
+		}
+	}
+	.bb-header__bottom {
+		background:$nav-bg;
+		text-align:center;	
+	}
+	.bb-logo__wrap {
+		@extend .col-sm-6;
+		@extend .col-sm-pull-6;
+		@include responsive(lg) {
+			position: absolute;
+		}
+		.bb-logo {
+			display:inline-block;
+			margin:10px 0 0 0;
+			padding: 25px;
+			width:100%;
+			border-radius: 170px/100px;
+			left: 0;
+			position: relative;
+			z-index: 500;
+			@media (max-width: 767px) {
+				max-width: 180px;
+				border-radius: 0;
+				padding: 15px;
+			}
+			@include responsive(sm) {	
+				margin:16px 0 16px 14px;
+				max-width:220px;
+				background: $clr-white;
+				img {
+					max-width: 100% !important;
+				}
+			}
+			@include responsive(md) {
+				max-width: 240px;
+			}
+			@include responsive(lg) {
+				max-width: 260px;
+			}
+			.logo-regular {
+				@media #{$is-hidpi} {
+					display:none;
+				}
+			}
+			.logo-retina {
+				display:none;
+				@media #{$is-hidpi} {
+					display:block;
+				}
+			}
+		}
+	}
+	
+	#hamburger {
+		@extend .visible-xs;  
+		@extend .pull-left;
+		position:absolute;
+		right:5%;
+		top:40px;
+		background:$hamburger-bg !important;	
+		@media (max-width: 768px) {
+			width: 110px;
+		}
+	}	
+}

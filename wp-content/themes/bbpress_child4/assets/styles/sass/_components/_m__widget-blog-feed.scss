@@ -1,0 +1,62 @@
+#widget-blog-feed {
+	.blog-feed {
+		@extend %nav-ul;
+		text-align:left;
+		li {
+			margin-bottom:25px;
+			font-size:18px;
+			.date {
+				color:$clr-white;
+				background: $clr-brand-2;
+				padding: 10px;
+				font-weight: bold;
+				margin-bottom: 15px;
+				display: inline-block;
+			}
+			a {
+				font-weight:bold;
+				color:$clr-white;
+				margin-left:5px;
+				&.title {
+					float: left;
+					width: 100%;
+				}
+				&:hover {
+					color:$clr-brand-2-dark;
+				}
+			}
+			.excerpt {
+				p {
+					a {
+						color: $clr-brand-3;
+					}
+				}
+			}
+		}
+		&.no-date {
+			.date {
+				display:none;
+			}
+		}
+		&.no-excerpt {
+			.excerpt {
+				display:none;
+			}
+		}
+		.date.long {
+			display:inline-block;
+			margin-bottom: 15px;
+		}
+		.date.short {
+			display: none;
+		}
+		&.long-date {
+			.date.short {
+				display:none;
+			}
+			.date.long {
+				display:none;
+			}
+		}
+	}	
+}

@@ -1,0 +1,21 @@
+{
+  "name": "fa-scss-plus",
+  "version": "1.0.0",
+  "homepage": "https://github.com/dnomak/fa-scss-plus",
+  "authors": [
+    "@dnomak"
+  ],
+  "description": "Font Awesome Scss Plus",
+  "main": "_fontawesome.scss",
+  "keywords": [
+    "font",
+    "fontawesome"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "README.md"
+  ]
+}
